@@ -3,6 +3,7 @@ import { useNavigate, Link } from "react-router-dom";
 // import AuthContext from "../context/AuthProvider";
 import useLogout from "../hooks/useLogout";
 
+
 const Home = () => {
   
   const logout = useLogout()
@@ -17,7 +18,7 @@ const Home = () => {
 
   return (
     <section>
-    <h1>Home</h1>
+    <h1 className="title_home">Home</h1>
     <br />
     <p>You are logged in!</p>
     <br />
@@ -29,7 +30,7 @@ const Home = () => {
     <br />
     <Link to="/linkpage">Go to the link page</Link>
     <div className="flexGrow">
-      <button onClick={signOut}>Sign Out</button>
+      <button className="signout_button" onClick={signOut}>Sign Out</button>
     </div>
 </section>
   )

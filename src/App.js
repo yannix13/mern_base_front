@@ -1,7 +1,7 @@
-import './App.css';
+// import './App.css';
 import LoginApi from './api/LoginApi';
 import Register from './api/Register';
-import Layout from './components/Layout';
+import Layout from './components/layout/Layout';
 import Editor from './components/Editor';
 import Home from './components/Home';
 import LinkPage from './components/LinkPage';
@@ -13,6 +13,7 @@ import Admin from './components/Admin';
 
 import PersistLogin from "./components/PersistLogin"
 import { Routes, Route } from 'react-router-dom';
+import Accueil from './components/Accueil';
 
 const ROLES = {
   "User": "2001",
@@ -25,6 +26,7 @@ function App() {
     <Routes>
       <Route path='/' element={<Layout/> }>
           {/* Public routes */}
+          <Route path='/' element={<Accueil/>}/>
           <Route path='login' element={<LoginApi />}/>
           <Route path='register' element={<Register />}/>
           <Route path='linkpage' element={<LinkPage />}/>
@@ -34,6 +36,7 @@ function App() {
           <Route element={<PersistLogin/>}>
               <Route element={<RequireAuth allowedRoles={[ROLES.User]}/>}>
                   <Route path='/' element={<Home/>}/>
+                  {/* <Route path='/' element={<Accueil/>}/> */}
               </Route>
               
               <Route element={<RequireAuth allowedRoles={[ROLES.Editor]}/>}>

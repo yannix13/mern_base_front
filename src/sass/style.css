@@ -1,0 +1,21 @@
+.title_home {
+  font-size: 30px;
+  color: red;
+}
+
+.navbar__container {
+  background-color: black;
+  height: 7vh;
+}
+
+.sidebar__container {
+  background-color: black;
+  height: 97vh;
+  width: 150px;
+}
+
+.content_app {
+  display: flex;
+}
+
+/*# sourceMappingURL=style.css.map */
